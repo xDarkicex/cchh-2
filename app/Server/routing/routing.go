@@ -1,11 +1,7 @@
 package routing
 
-import (
-	"github.com/labstack/echo/v4"
-)
-
-func GetRouter() *echo.Echo {
-	var e *echo.Echo = echo.New()
+//Routes loads all routes withing application
+func (e *echo.Echo) Routes() *echo.Echo {
 	e.GET("/", app.Index)
 	e.GET("/contact", app.Contact)
 	e.GET("/about", app.About)
@@ -17,6 +13,5 @@ func GetRouter() *echo.Echo {
 	e.GET("/mission", app.Mission)
 	e.GET("/board", app.Board)
 	e.Static("/static", "assets")
-
-	return _echo
+	return e
 }
