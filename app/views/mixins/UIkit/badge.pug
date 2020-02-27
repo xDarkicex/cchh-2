@@ -1,0 +1,8 @@
+mixin badge(text)
+  span.uk-badge&attributes(attributes)
+    if block
+      block
+    else if text
+      = text
+    else
+      | Error: No block/text provided for badge

@@ -1,0 +1,16 @@
+mixin accordion()
+  ul(uk-accordion)&attributes(attributes)
+    if block
+      block
+    else
+      +accordion-li('ERROR')
+        p Error: No block provided for accordion mixin
+
+mixin accordion-li(title)
+  li&attributes(attributes)
+    h3.uk-accordion-title= title
+    .uk-accordion-content
+      if block
+        block
+      else
+        p Error: No block provided for accordion-li mixin

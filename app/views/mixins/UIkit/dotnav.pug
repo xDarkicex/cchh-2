@@ -1,0 +1,9 @@
+mixin dotnav(vertical)
+  ul.uk-dotnav(class=((vertical)?'uk-dotnav-vertical':''))&attributes(attributes)
+    if block
+      block
+    else
+      li Error: No block provided for dotnav mixin
+
+mixin dotnav-li(url)
+  li&attributes(attributes): a(href=url)

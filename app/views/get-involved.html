@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/favicon.png">
+    <title>{{.Title}}</title>
+   {{template "stinger" .View}}
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      {{template "header"}}
+      <style>
+        .uk-container > p {
+          text-indent: 2em;
+        }
+        .uk-custom {
+          text-align: left;
+        }
+        .uk-card-body {
+          padding: 30px 20px;
+        }
+        hr {
+          margin-left: 30px!important;
+        }
+      </style>
+        <div class="uk-container">
+          {{template "logo"}}
+        </div>
+        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-image: url('/static/assets/images/get-involved-splash.png'); background-position: top; background-repeat: no-repeat; background-size: cover; height: 100vh;" data-sizes="(min-width: 650px) 650px, 100vw" uk-img uk-parallax="bgy: -200">
+         <div class="uk-text-center uk-padding-small">
+            </div>
+        </div>
+      </div>
+     </div>
+      <div class="uk-width-1-1 uk-padding">
+            <h1 class="uk-heading-line uk-text-center" style="font-weight: 500;"><span class="uk-heading-large">Get Involved</span></h1>
+            <p>All clinicians and volunteers wishing to get involved must secure an appointment for interviewing and on boarding processes. Clinic locations, directions and instructions will be emailed to you once an appointment is secured.</p>        
+        </div>
+        <div class="uk-width-1-1 uk-padding">
+          <div class="uk-section-muted uk-section">
+            
+            <div class="uk-container">
+            
+            <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+              <h3 class="uk-heading-line uk-text-center" style="font-weight: 500;"><p><b><u>Clinical Team Members:</u></b></p></h3>
+              <hr>
+              <div>
+                  <p><b><u>Physician/Residents/Medical Students (Providers):</u></b> These healthcare providers will administer non-emergent medical care. This will include: routine wellness care, such as diabetes and heart failure management and education, wound assessment and treatment, routine physical assessments, and other primary care services.  They will also provide prescriptions and interpret lab results.</p>
+              </div>
+              <div>
+                  <p><b><u>Psychiatrist:</u></b> The psychiatrist will assess and treat individuals with mental health disorders, as well as make necessary referrals for counseling needs. This provider will be available at regularly scheduled times so that those in need will have a consistent, reliable mental health provider. The psychiatrist will provide  necessary prescriptions to enable individuals with mental health disorders to maintain access to their critical medications.</p>
+              </div>
+              <div>
+                  <p><b><u>Registered Nurses:</u></b> The Registered Nurses will be paramount in delivering care directed by the medical providers. They will complete screenings and lab draws, administer vaccinations, and complete physical assessments within their scope of practice, conveying all information to the Providers.</p>
+              </div>
+              <div>
+                  <p><b><u>Medical Assistants:</u></b> The Medical Assistants will triage patients in the climate-controlled tent, check-in all patients, and assess vitals. They will guide patient flow and maintain infection control processes within patient care areas.</P>
+              </div>
+              <div>
+                  <p><b><u>Social Workers:</u></b> Social Workers will be available to help navigate community resources, help secure individuals with funding for medical care as able, and aid in establishing long-term healthcare providers.</P>
+              </div>
+              <h3 class="uk-heading-line uk-text-center" style="font-weight: 500;"><p><b><u>Ancillary Staff:</u></b></p></h3>
+              <hr>
+              <div>
+                  <p><b><u>Drivers:</u></b> Drivers will pick up staff and drive them to locations with heavy populations of individuals experiencing homelessness.</P>
+              </div>
+              <div>
+                  <p><b><u>Security Guards:</u></b> Security guards will be present at each mobile clinic to ensure the safety of staff and patients.</P>
+              </div>
+              <div>
+              <hr>
+                <span>
+                  
+                  <p class="uk-text-center uk-text-muted uk-leaded">All visits are based upon availability.</p> 
+                  <p class="uk-text-center uk-text-meta uk-text-italics"><i>If you are interested in volunteering, please contact us today to make an appointment.</i></p>               
+                </span>  
+              </div>         
+            </div>
+          </div>
+        </div>
+      
+      
+    </div>
+  </div>
+
+  </body>
+</html>

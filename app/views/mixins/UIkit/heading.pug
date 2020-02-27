@@ -1,0 +1,17 @@
+mixin heading(text)
+  h1.uk-heading-primary&attributes(attributes)
+    if text
+      = text
+    else if block
+      block
+    else
+      | Error: No text/block provided for heading-primary mixin
+
+mixin heading-hero(text)
+  h1.uk-heading-hero&attributes(attributes)
+    if text
+      = text
+    else if block
+      block
+    else
+      | Error: No text/block provided for heading-primary mixin

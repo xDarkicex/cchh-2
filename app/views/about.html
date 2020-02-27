@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/favicon.png">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    {{template "stinger" .View}}
+    <style>
+      .uk-container > p {
+        text-indent: 2em;
+      }
+      .uk-custom {
+        text-align: left;
+      }
+      .uk-card-body {
+        padding: 30px 20px;
+      }
+    </style>
+    <title>{{.Title}}</title>
+    
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column
+          uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical"></ul>
+        </div>
+        </div>
+        {{template "header"}}
+      
+        <div class="uk-container">
+            {{template "logo"}}
+        </div>
+        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-image:
+          url('/static/assets/images/about-splash.png');
+          height: 100vh;" data-sizes="(min-width: 650px) 650px, 100vw" uk-img uk-parallax="bgy: -200">
+          
+        </div>
+        <div class="uk-width-1-1">
+          <div class="uk-padding">
+            <h1 class="uk-heading-line uk-heading-small uk-text-center"
+              style="font-weight: 500;"><span class="uk-heading-large">About</span></h1>
+          </div>
+          <div class="uk-width-1-1 uk-padding">
+            <div class="uk-section-muted uk-section">
+              <div class="uk-container">
+                <h3>Compassionate Care Mobile Clinic</h3>
+                <hr>
+                <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+                  <div>
+                    <p>Compassionate Care Mobile Health, NPO 501(C)(3), was born
+                      out of a dream and desire to give back to humanity in a
+                      meaningful way by providing quality medical care to
+                      California’s most underserved, vulnerable and increasingly
+                      growing population; individuals experiencing homelessness.
+                      Undoubtedly, California has the nation's most prevalent
+                      homeless population. As of January 2018, California had an
+                      estimated 129,972 individuals experiencing homelessness, as
+                      reported by Continuums of Care to the U.S. Department of
+                      Housing and Urban Development (HUD); showing that
+                      approximately one-quarter of the nationwide homeless
+                      population lives within California alone. We're one of the
+                      two states in our nation that holds over a 6% total
+                      population attributed to homelessness. This abnormal crisis
+                      can be attributed to multiple variables; however, with great
+                      hardship comes abundant opportunity. A carefully selected team of qualified professionals and volunteers have joined forces to provide services and 'compassionately care' for individuals experiencing homelessness, who are in need of medical attention - in situ, via a fully customized mobile health clinic. The project originated within the famed
+                      Silicon Valley of The Golden State; Palo Alto, California
+                      and is honored to collaborate with scholars at Stanford
+                      University to provide services for affected populations in
+                      the greater Bay Area. The mobile clinic was fashioned from a
+                      46' overall length gooseneck style trailer shell featuring all the medical amenities needed for high-level care.</p>
+                  </div>
+                  <div>
+                    <p>
+                      We plan on using our program design to provide consistent access to basic healthcare needs for individuals within our communities who would otherwise utilize emergency rooms for routine needs, or delay seeking medical attention until simple ailments turn into life-threatening situations.
+                      Compassionate Care Mobile Health will provide a consistent
+                      face of medicine to those within our communities, enabling
+                      us to establish rapport and build trust with individuals who
+                      often feel abandoned and alone. Our goal is that with the relationships we build - with the homeless, community resources, and local medical professionals, we can transition these individuals to primary care physicians once they are established with resources. Our vision is a long-term solution to the epidemic that is affecting hospitals nationwide and we are certain that is something we can achieve. 
+                    </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </body>
+</html>

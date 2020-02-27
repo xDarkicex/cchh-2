@@ -1,0 +1,13 @@
+mixin icon(icon)
+  span(uk-icon='icon: '+icon)&attributes(attributes)
+
+mixin iconnav()
+  ul.uk-iconnav&attributes(attributes)
+    if block
+      block
+    else
+      li Error: No block provided for iconnav mixin
+
+mixin icon-li(icon)
+  li
+    +icon(icon)&attributes(attributes)

@@ -1,0 +1,16 @@
+{{define "stinger"}}
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="/static/pipeline/stylesheets/application.css" />
+  <script src="/static/assets/js/application.js" />
+  {{ if  .}}
+    <script src="/static/pipeline/scripts/{{.}}.js"></script>
+    <link rel="stylesheet" href="/static/pipeline/stylesheets/{{.}}.css"></script>
+    
+  {{end}}
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.3.1/css/uikit.min.css"/>
+  <link rel="stylesheet" href="/static/assets/css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.js"></script>
+  <script src="/static/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.js"></script>
+{{end}}

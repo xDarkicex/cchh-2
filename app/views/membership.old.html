@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/images/favicon.png">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+    <script src="/static/assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+    <title>{{.Title}}</title>
+    {{/* <script src="/js/main.js"></script> */}}
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      <div id="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+        <nav class="uk-text-bold uk-navbar-container uk-height-match" uk-navbar>
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <li class="uk-hidden@m"><a href="#offcanvas" uk-toggle uk-icon="icon: menu"></a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-center">
+            <div class="uk-navbar-center-left uk-visible@m">
+              <ul class="uk-navbar-nav">
+                <li class="uk-parent"><a href="/about">About</a></li>
+                <li class="uk-parent"><a href="/visit">Visit</a></li>
+								<li class="uk-parent"><a href="/gallery">Gallery</a></li>
+              </ul>
+            </div><a class="uk-navbar-item uk-logo" href="/"><img src="/static/assets/image/favicon.png" alt="Compassionate Care Wildlife Logo"></a>
+            <div class="uk-navbar-center-right uk-visible@m">
+              <ul class="uk-navbar-nav">
+                <li class="uk-parent"><a href="/donate">Donate</a></li>
+                <li class="uk-parent"><a href="/servicesp">Services</a></li>
+                
+								<li class="uk-parent"><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <style>
+        .uk-container > p {
+          text-indent: 2em;
+        }
+        .uk-custom {
+          text-align: left;
+        }
+        .uk-card-body {
+          padding: 30px 20px;
+        }
+      </style>
+      {{/* <div class="uk-padding">
+        <h1 class="uk-text-center uk-heading-line"><span>We Believe in Compassionate Care</span></h1>
+      </div> */}}
+      <style>
+        #resources {
+          color: white;
+          height: 400px;
+        }
+        #resources a {
+          color:white;
+        }
+      </style>
+      {{/* <div class="uk-child-width-1-2 uk-grid-collapse" uk-grid id="resources">
+        <div class="uk-background-primary uk-padding uk-width-1-2@m uk-width-1-1@s" style="background-image: url('/static/assets/img/horse_preview.jpg'); background-size: cover;">
+          
+        </div>
+        <div class="uk-background-primary uk-padding uk-width-1-2@m uk-width-1-1@s">
+          <h3 class="uk-heading-divider" style="color:white;">Compassionate Care Wildlife Sactuary</h3>
+          <p>As an NPO 501C(3) we gratefully accept your tax deductible donations, credit volunteer work and of course we will foster all animals needing homes; ranging from domestic, farm and of course wild and exotic species. Start accumulating good karma now by donating to CCWS so that we may love, protect and care for  our animals with the best medicines and facilities possible.</p>
+        </div>
+      </div>
+      <div class="uk-child-width-1-2 uk-grid-collapse" uk-grid id="resources">
+        <div class="primary-alt uk-padding uk-width-1-2@m uk-width-1-1@s">
+          <h3 class="uk-heading-divider">Animal Kingdom Reigns Supreme</h3>
+          <p>Compassionate Care Wildlife Sanctuary accepts foster animals, visitations, educational opportunities and volunteering upon appointment and availability only.
+      We are a non-religious and non-political organization dedicated to the welfare of the animal kingdom.</p>
+        </div>
+        <div class="uk-background-primary uk-padding uk-width-1-2@m uk-width-1-1@s" style="background-image: url('/static/assets/img/v_preview.jpg'); background-size: cover;">
+        </div>
+      </div> */}}
+      <div class="uk-container uk-padding">
+        <h1 class="uk-heading-line uk-text-center"><span>Memberships</span></h1>
+        <div class="uk-child-width-1-1@m uk-grid-small uk-grid-match" uk-grid>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card-media-top" style="background: url('/static/assets/img/butterflys_Preview.jpg'); height: 350px; background-size: cover; margin: -20px; background-position: center;">
+                
+              </div>
+              <h3 class="uk-card-title">Monarch Butterfly</h3>
+              <p class="uk-text-meta">Memebership: $1,000</p>
+              <p>6-month pass, must make appointment 5 days in advance.</p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card-media-top" style="background: url('/static/assets/img/eagle_Preview.jpg'); height: 350px; background-size: cover; margin: -20px; background-position: center;"> 
+              </div>
+              <h3 class="uk-card-title">Bald Eagle</h3>
+              <p class="uk-text-meta">Memebership: $5,000</p>
+              <p>Annual pass, admission granted upon 48 hour notice.</p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card-media-top" style="background: url('/static/assets/img/bison_Preview.jpg'); height: 350px; background-size: cover; margin: -20px; background-position: center;"> 
+              </div>
+              <h3 class="uk-card-title">American Bison</h3>
+              <p class="uk-text-meta">Memebership: $25,000</p>
+              <p>Unlimited pass, admission granted upon 48 hour notice.</p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card-media-top" style="background: url('/static/assets/img/grizzle_Preview.jpg'); height: 350px; background-size: cover; margin: -20px; background-position: center;"> 
+              </div>
+              <h3 class="uk-card-title">Grizzly Bear</h3>
+              <p class="uk-text-meta">Memebership: $50,000</p>
+              <p>Unlimited pass, admission granted upon 48 hour notice, includes: one night stay at The Nest - a luxurious ultra modern villa built on one of the property's cliffs, chauffeured Mercadez G-wagon, personal chef, personal assistant.</p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <div class="uk-card-media-top" style="background: url('/static/assets/img/mountain_lion_Preview.jpg'); height: 350px; background-size: cover; margin: -20px; background-position: center;"> 
+              </div>
+              <h3 class="uk-card-title">Mountain Lion</h3>
+              <p class="uk-text-meta">Memebership: $100,000</p>
+              <p>Unlimited pass, admission granted upon 48 hour notice, includes: weekend stay at The Nest - a luxurious ultra modern villa built on one of the property's cliffs, chauffeured Mercadez G-wagon, personal chef, personal assistant and a personalized plaque installed inside the park.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/* <div class="uk-container uk-padding">
+        <h1 class="uk-heading-line uk-text-center"><span>Accumulate Karma</span></h1>
+        <p>Start accumulating good karma now by donating to CCWS so that we may love, protect and care for  our animals with the best medicines and facilities possible.</p>
+        <div class="uk-text-center">
+          <a href="/donate"class="uk-button uk-button-primary uk-button-large uk-width-2-3 uk-width-auto@s" data-uk-icon="check" title="Donate">DONATE NOW</a>
+        </div> */}}
+      </div>    
+      <footer class="uk-container uk-padding">
+        <div uk-grid>
+          <div class="uk-width-1-2@m uk-width-1-1@s">
+            {{/* <ul class="uk-list uk-text-meta">
+              <li><span uk-icon="icon: location"></span><span class="uk-padding-small">Address: 7545 N. Del Mar Ave., Ste. 103 Fresno, CA 93711</span></li>
+              <li><span uk-icon="icon: clock"></span><span class="uk-padding-small uk-text-right">Office Hours: Monday - Friday, 8AM to 5PM</span></li>
+              <li><span uk-icon="icon: comment"></span><span class="uk-padding-small uk-text-right">Referrals accepted 7 days a week</span></li>
+              <li><span uk-icon="icon: phone"></span><span class="uk-padding-small">Phone: <a href="tel:559-432-2003">1(559) 432-2003</a></span></li>
+              <li><span uk-icon="icon: file"></span><span class="uk-padding-small">Fax all referrals to: 1(559) 899-0967</span></li>
+              <li><span uk-icon="icon: file"></span><span class="uk-padding-small">Fax all MD orders to: 1(877) 868-6528</span></li>
+              <li><span uk-icon="icon: mail"></span><span class="uk-padding-small">Email: <a href="mailto:info@cchha.com">info@cchha.com</a></span></li>
+            </ul> */}}
+          </div>
+          {{/* <div class="uk-width-1-2@m uk-width-1-1@s uk-text-center">
+            <q>I've traveled the world and sat with princes and paupers, but to be accepted by nature and the animal kingdom has by far been my greatest privilege and joy</q>
+            <blockquote class="uk-text-bold uk-text-right">- Shawn Kaleka, founder & CEO</blockquote>
+          </div> */}}
+        </div>
+      </footer>
+    </div>
+    		
+    <!-- JS FILES -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+  </body>
+</html>

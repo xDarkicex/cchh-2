@@ -1,0 +1,21 @@
+//t = template.Must(template.New("stinger").ParseFiles("./app/views/layouts/stinger.html"))
+		//t, err := t.ParseFiles("./app/views/layouts/logo.html", "./app/views/layouts/header.gohtml")
+
+		//if err != nil {
+		//		log.Println(err)
+		//}
+		//file, err := ioutil.ReadFile("./app/views/" + view + ".html")
+		//if err != nil {
+		//		log.Println(err)
+		//}
+		//t, err = t.New(view).Funcs(GetFuncMap()).Parse(string(file))
+		//if err != nil {
+		//		log.Println(err)
+		//}
+		//err = t.Execute(w, data)
+		//if err != nil {
+		//		log.Printf("\nExecute error: %v", err)
+		//}
+		//if viewContext, isMap := data.(map[string]interface{}); isMap {
+		//		viewContext["reverse"] = c.Echo().Reverse
+		//}

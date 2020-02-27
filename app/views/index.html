@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/images/favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+    <link href="http://localhost:3000/static/assets/css/main.css">
+    <link href="http://localhost:3000/static/assets/css/uikit.min.css">
+    <script src="http://localhost:3000/static/assets/js/main.js"></script>
+
+    <title>{{.Title}}</title>
+    {{template "stinger" .View}}
+
+  </head>
+  <body>
+    <div class="uk-hidden">
+      <script>
+
+        var imagesSmall = [];
+                function preloadSmall() {
+                  
+                    for (var i = 0; i < arguments.length; i++) {
+                        imagesSmall[i] = new Image();
+                        imagesSmall[i].src = preloadSmall.arguments[i];
+                    }
+                }
+
+        var images = [];
+        function preload() {
+          
+            for (var i = 0; i < arguments.length; i++) {
+                images[i] = new Image();
+                images[i].src = preload.arguments[i];
+            }
+        }
+          // preload image
+          preload(
+            '/static/assets/images/1.png',
+            
+            '/static/assets/images/4.png',
+            
+            '/static/assets/images/3.png',
+            
+            '/static/assets/images/2.png',
+            
+          );
+
+          preloadSmall(
+            '/static/assets/images/1-small.png',
+            '/static/assets/images/4-small.png',
+            '/static/assets/images/3-small.png',
+            '/static/assets/images/2-small.png',
+          );
+          //-- usage --//
+          
+          function getPicture(x) {
+            return images[x]
+          }
+          function getArray() {
+            return images
+          }
+          function getSmallArray() {
+            return imagesSmall
+          }
+       
+      </script>
+    </div>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-container uk-flex uk-position-bottom-center uk-text-center uk-width-1-2">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      {{template "header"}}
+
+
+      <div class="uk-container">
+        {{template "logo"}}
+      </div>
+
+      <div class="">
+
+        <div id="img_container" class="uk-animation-slide-bottom-medium uk-scrollspy-inview"
+          background-size: cover;" data-src="/static/assets/images/1.png" , data-sizes="(min-width: 650px) 650px" uk-img>
+
+          <div class="uk-flex uk-flex-center uk-flex-bottom"
+            data-uk-scrollspy="target:> .animate; cls: uk-animation-slide-bottom-small uk-invisible; delay: 300"
+            uk-height-viewport="offset-top: 0px">
+            <div class="animate uk-invisible uk-position-bottom uk-padding uk-button uk-width-1-1@m uk-flex-column uk-flex-between" style="color: white;">
+              <a class="uk-button uk-button-default uk-button-large" style="color:white;" uk-icon="icon:arrow-right" href="/about" title="Learn More">LEARN
+                MORE</a>
+              <a class="uk-button uk-button-primary uk-button-large" uk-icon="icon:check" href="/donate" title="Learn More">DONATE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+      const ODD = 1;
+      const EVEN = 0;
+      var currentSlide = 0;
+      var currentSlidesmall = 0;
+      var array = getArray();
+      var small = getSmallArray();
+			function nextSlide(eva) {
+        console.log((eva === 1) ? "Odd" : "Even" );
+        currentSlide = (currentSlide+1)%array.length;
+          if (eva == EVEN){
+            return array[currentSlide].src
+          } 
+          currentSlidesmall = (currentSlidesmall+1)%small.length;
+          
+          if (eva == ODD) {
+            console.log(currentSlidesmall, "current index of small");
+            return small[currentSlidesmall].src
+          }
+        }
+         
+      var img_container = document.getElementById('img_container');
+			setInterval(function(){
+        width = window.innerWidth;
+        if (width < 650) {
+          console.log("here", width);
+          img_container.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+nextSlide(ODD)+')'; 
+        } else {
+          img_container.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('+nextSlide(EVEN)+')'; 
+        }
+        // img_container.style.backgroundAttachment = "fixed";
+			}, 2000)
+      
+    
+    </script>
+    </div>
+  </body>
+</html>

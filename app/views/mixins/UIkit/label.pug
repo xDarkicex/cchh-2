@@ -1,0 +1,8 @@
+mixin label(text)
+  span.uk-label&attributes(attributes)
+    if text
+      = text
+    else if block
+      block
+    else
+      | Error: No text/block provided for label mixin

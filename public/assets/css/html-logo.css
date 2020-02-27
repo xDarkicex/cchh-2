@@ -1,0 +1,57 @@
+#logoMain, #logoSubText {
+  /* margin: 0px; */
+  padding: 15px; 
+}
+#logoQuote {
+  font-size: 18px;
+  font-weight: 200;
+}
+#logoSubText {
+  /* font-size: 30px; */
+  font-size: 20px;
+  font-weight: 200; 
+  letter-spacing: 6px;
+  word-spacing: 10px;
+  font-stretch: extra-expanded;
+  margin:-20px;
+}
+#logoMain {
+  font-weight: 400; 
+  /* font-size: 2.625rem; */
+  letter-spacing: 3px;
+  color:#83d6f5;
+  padding-bottom: 0px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding-bottom: 0px;
+  margin-bottom: 15px;
+}
+ @media only screen and (max-width: 600px) { 
+    #logoMain, #logoSubText {
+    margin: 0px;
+    padding: 0px;
+    }
+    #logoQuote {
+      font-size:16px;
+    }
+    #logoSubText {
+      font-size: 30px;
+      font-size: 20px;
+      font-weight: 200; 
+      letter-spacing: 6px;
+      word-spacing: 10px;
+      font-stretch: extra-expanded;
+      margin:-20px;
+    }
+    #logoMain {
+      font-weight: 400; 
+      font-size: 2.625rem;
+      letter-spacing: 3px;
+      color:#83d6f5;
+      padding-bottom: 0px;
+      font-weight: 400;
+      letter-spacing: 3px;
+      padding-bottom: 0px;
+      margin-bottom: 15px;
+    }
+  }

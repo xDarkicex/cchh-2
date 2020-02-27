@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/images/favicon.png">
+
+    <title>{{.Title}}</title>
+    {{template "stinger" .View}}
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column
+          uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      {{template "header"}}
+
+      <style>
+        .uk-container > p {
+          text-indent: 2em;
+        }
+        .uk-custom {
+          text-align: left;
+        }
+        .uk-card-body {
+          padding: 30px 20px;
+        }
+      </style>
+      {{/* <div class="uk-padding">
+        <h1 class="uk-text-center uk-heading-line"><span>We Believe in
+            Compassionate Care</span></h1>
+      </div> */}}
+      <style>
+        #resources {
+          color: white;
+          height: 400px;
+        }
+        #resources a {
+          color:white;
+        }
+      </style>
+      <div class="uk-container">
+        {{template "logo"}}
+      </div>
+      <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle
+        uk-background-cover uk-light" style="background-image:
+        url('/static/assets/images/donate-splash.png');
+        height: 100vh;" data-sizes="(min-width: 650px) 650px, 100vw" uk-img uk-parallax="bgy: -200">
+        <div class="uk-text-center uk-padding-small">
+
+        </div>
+      </div>
+      <div class="uk-width-1-1">
+        <div class="uk-padding">
+          <h1 class="uk-heading-line uk-heading-small uk-text-center"
+            style="font-weight: 500;"><span class="uk-heading-large">Donate</span></h1>
+        </div>
+
+
+        <div class="uk-width-1-1 uk-padding">
+          <div class="uk-section-muted uk-section">
+            <div class="uk-container">
+              <h3>Compassionate Care Mobile Health</h3>
+              <hr>
+              <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+                <div>
+                  <p>You can make a positive change in our community and beyond by donating to Compassionate Care Mobile Health, as an NPO 501(C)(3), we will gladly accept your tax deductible donations and credit volunteer work. Your entire donation goes strictly toward medical attention specifically toward individuals transitioning through homelessness. Transparency is our philosophy; detailed financial statements regarding your donations are shared upon request.</p>
+                </div>
+                <div>
+                  <p>This program will have benefits that expand beyond the homeless population. Local hospitals will benefit from reductions in unnecessary emergency room visits, improving patient flow, and potentially reducing emergency room wait times. Additionally, the program will enroll eligible individuals into medical coverage, which will allow hospitals to receive reimbursement from these persons if and when they should require hospitalization.</p>
+                </div>
+                <div>
+                  <p>Compassionate Care Mobile Health will not only aid in access to community resources, but will address the individuals wholly. Ideally, this will impact some of the underlying causes of their homelessness and improve their well-being beyond medical conditions.</p>
+                </div>
+                <blockquote cite="#">
+                  <p class="uk-margin-small-bottom uk-text-center uk-text-light"><b>Thank you so much for your love, support, and contributions.</b></p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

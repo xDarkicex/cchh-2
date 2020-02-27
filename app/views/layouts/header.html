@@ -1,0 +1,34 @@
+{{define "header"}}
+<div id="header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+  <nav class="uk-text-bold uk-navbar-container uk-height-match" uk-navbar>
+    <div class="uk-navbar-left">
+      <ul class="uk-navbar-nav">
+        <li class="uk-hidden@m"><a href="#offcanvas" uk-toggle uk-icon="icon: menu"></a></li>
+      </ul>
+    </div>
+    <div class="uk-navbar-center">
+      <div class="uk-navbar-center-left uk-visible@m">
+        <ul class="uk-navbar-nav">
+          <li class="uk-parent"><a href="/about">About</a></li>
+          <li class="uk-parent"><a href="/mission">Mission</a></li>
+          <li class="uk-parent"><a href="/services">Services</a></li>
+          <li class="uk-parent"><a href="/get-involved">Get Involved</a></li>
+
+
+        </ul>
+      </div><a class="uk-navbar-item uk-logo" href="/"><img
+          src="/static/assets/images/favicon.png"
+          alt="Compassionate Care Logo"></a>
+      <div class="uk-navbar-center-right uk-visible@m">
+        <ul class="uk-navbar-nav">
+          <li class="uk-parent"><a href="/donate">Donate</a></li>
+          <li class="uk-parent"><a href="/gallery">Gallery</a></li>
+          <li class="uk-parent"><a href="/board">Board</a></li>
+          <li class="uk-parent"><a href="/contact">Contact</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+{{end}}

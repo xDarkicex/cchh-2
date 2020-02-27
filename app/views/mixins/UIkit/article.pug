@@ -1,0 +1,17 @@
+mixin article()
+  article.uk-article&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for article mixin
+
+mixin article-title(title, url)
+  h1.uk-article-title&attributes(attributes)
+    a.uk-link-reset(href=url)= title
+
+mixin article-meta()
+  p.ul-article-meta&attributes(attributes)
+    if block
+      block
+    else
+      | Error: No block provided for article-meta mixin

@@ -1,0 +1,36 @@
+mixin countdown(date)
+  div.uk-grid-small.uk-child-width-auto.uk-margin(uk-grid uk-countdown='date:'+date)&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for countdown mixin
+
+mixin countdown-seperator()
+  span.uk-countdown-separator :
+
+mixin countdown-label(text)
+  div(class='uk-countdown-label uk-margin-small uk-text-center uk-visible@s')= text
+
+mixin countdown-days(labeled)
+  div
+    span.uk-countdown-number.uk-countdown-days&attributes(attributes)
+    if labeled
+      +countdown-label('Days')
+
+mixin countdown-hours(labeled)
+  div
+    span.uk-countdown-number.uk-countdown-hours&attributes(attributes)
+    if labeled
+      +countdown-label('Hours')
+
+mixin countdown-minutes(labeled)
+  div
+    span.uk-countdown-number.uk-countdown-minutes&attributes(attributes)
+    if labeled
+      +countdown-label('Minutes')
+
+mixin countdown-seconds(labeled)
+  div
+    span.uk-countdown-number.uk-countdown-seconds&attributes(attributes)
+    if labeled
+      +countdown-label('Seconds')

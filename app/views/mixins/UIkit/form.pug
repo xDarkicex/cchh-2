@@ -1,0 +1,40 @@
+mixin form()
+  form&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for form mixin.
+
+mixin input()
+  - var a = { type: 'text' }
+  - Object.assign(a, attributes)
+  input.uk-input&attributes(a)
+
+mixin select()
+  select.uk-select
+    if block
+      block
+    else
+      option Error: No block provided for select
+
+mixin textarea()
+  textarea.uk-textarea&attributes(attributes)
+
+mixin radio(label)
+  label
+    input.uk-radio(type='radio')&attributes(attributes)
+    = label
+
+mixin checkbox(label)
+  label
+    input.uk-checkbox(type='checkbox')&attributes(attributes)
+    = label
+
+mixin range()
+  input.uk-range(type='range')&attributes(attributes)
+
+mixin form-icon(icon, flip, url)
+  if url
+    a.uk-form-icon(href=url uk-icon='icon: '+icon class=((flip)?'uk-icon-flip':''))&attributes(attributes)
+  else
+    span.uk-form-icon(uk-icon='icon: '+icon class=((flip)?'uk-icon-flip':''))&attributes(attributes)

@@ -1,0 +1,52 @@
+mixin comment()
+  article.uk-comment&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for comment mixin
+
+mixin comment-header()
+  header.uk-comment-header&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for comment-header mixin
+
+mixin comment-body()
+  .uk-comment-body&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for comment-body mixin
+
+mixin comment-title(title)
+  h4.uk-comment-title&attributes(attributes)
+    if title
+      = title
+    else if block
+      block
+    else
+
+mixin comment-meta()
+  ul.uk-comment-meta.uk-subnav&attributes(attributes)
+    if block
+      block
+    else
+      li Error: No block provided for comment-meta mixin
+
+mixin comment-avatar()
+  img.uk-comment-avatar&attributes(attributes)
+
+mixin comment-list()
+  ul.uk-comment-list&attributes(attributes)
+    if block
+      block
+    else
+      li Error: No block provided for comment-list mixin
+
+mixin comment-li()
+  +comment()&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for comment-li mixin

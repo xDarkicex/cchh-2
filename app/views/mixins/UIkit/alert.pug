@@ -1,0 +1,8 @@
+mixin alert(close)
+  div(uk-alert)&attributes(attributes)
+    if block
+      if close
+        +close()(class='uk-alert-close')
+      block
+    else
+      p Error: No block provided for alert mixin

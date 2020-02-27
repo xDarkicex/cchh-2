@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/images/favicon.png">
+    <title>{{.Title}}</title>
+    {{template "stinger" .View}}
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column
+          uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      {{template "header"}}
+
+      <style>
+        .uk-container > p {
+          text-indent: 2em;
+        }
+        .uk-custom {
+          text-align: left;
+        }
+        .uk-card-body {
+          padding: 30px 20px;
+        }
+      </style>
+      
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+      <div class="uk-container">
+          {{template "logo"}}
+        </div>
+      <div class="uk-grid-collapse uk-grid-match uk-child-width-1-1" uk-grid>
+        <div class="uk-width-1-1@s uk-width-1-1@m uk-background-primary">
+          <div class="uk-padding">
+            <h4 class="uk-heading-line uk-text-center" style="color:white;"><span>please contact us today to make a contribution, learn more about us or just to say hello.</span></h4>
+            <div class="uk-flex-center uk-flex">
+              <form class="uk-grid-small" uk-grid action="/contact"
+                method="POST">
+                <div class="uk-width-1-2">
+                  <div class="uk-inline uk-width-1-1"><span class="uk-form-icon"
+                      uk-icon="icon: user"></span>
+                    <input class="uk-input" type="text" placeholder="Full Name"
+                      name="contact_name">
+                  </div>
+                </div>
+                <div class="uk-width-1-2">
+                  <div class="uk-inline uk-width-1-1"><span class="uk-form-icon"
+                      uk-icon="icon: mail"></span>
+                    <input class="uk-input" type="text" placeholder="E-Mail"
+                      name="contact_email">
+                  </div>
+                </div>
+                <div class="uk-width-1-2">
+                  <div class="uk-inline uk-width-1-1"><span class="uk-form-icon"
+                      uk-icon="icon: hashtag"></span>
+                    <input class="uk-input" type="phone" placeholder="Phone"
+                      name="contact_phone">
+                  </div>
+                </div>
+                <div class="uk-width-1-2">
+                  <div class="uk-inline uk-width-1-1"><span class="uk-form-icon"
+                      uk-icon="icon: location"></span>
+                    <input class="uk-input" type="text" placeholder="Address"
+                      name="contact_address">
+                  </div>
+                </div>
+                <div class="uk-width-1-1">
+                  <textarea class="uk-textarea" placeholder="Your Message"
+                    rows="5" style="resize:none; overflow-x:hidden;"
+                    name="contact_body"></textarea>
+                </div>
+                <div class="uk-width-1-3">
+                  <div class="g-recaptcha"
+                    data-sitekey="6Lf-1NoUAAAAANG2u9gz06nEeoQS3yGHBvNyZguf"></div>
+                  <input class="uk-input" type="submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{/* <div class="uk-width-1-1@s uk-width-1-2@m">
+          <div class="uk-container uk-padding">
+            <p class="">Compassionate Care Mobile Health 501(c)(3) is a secular
+              nonprofit organization, not associated with any political parties;
+              dedicated solely to the welfare of individuals transitioning
+              through various stages of homelessness and funded in part by
+              donations made by generous souls like you - thank you!</p>
+            <div class="uk-text-center">
+              <a href="/donate" class="uk-button uk-button-primary
+                uk-button-large uk-width-2-3 uk-width-auto@s"
+                data-uk-icon="check" title="Donate">DONATE NOW</a>
+            </div>
+          </div>
+        </div> */}}
+
+      </div>
+
+
+      <footer class="uk-padding">
+        <div uk-grid>
+          <div class="uk-width-1-1@m uk-width-1-1@s">
+            <br>
+            <blockquote class="uk-text-center uk-text-meta">Compassionate Care
+              Mobile Health 501(c)(3) is a secular nonprofit organization, not
+              associated with any political parties; dedicated solely to the
+              welfare of individuals transitioning through various stages of
+              homelessness and funded in part by donations made by generous
+              souls like you - thank you!</blockquote>
+
+          </div>
+          <div class="uk-width-1-2@m uk-width-1-1@s uk-text-center">
+
+          </div>
+
+
+
+        </div>
+      </footer>
+    </div>
+
+   
+  </body>
+</html>

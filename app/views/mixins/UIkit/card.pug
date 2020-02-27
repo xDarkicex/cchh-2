@@ -1,0 +1,78 @@
+mixin card()
+  unless attributes.class && attributes.class.includes('uk-card-')
+    - attributes.class = ((attributes.class)?attributes.class+' ':'') + 'uk-card-default'
+  .uk-card&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card mixin
+
+mixin card-title(title)
+  h3.uk-card-title&attributes(attributes)
+    if title
+      = title
+    else if block
+      block
+    else
+      | Error: No block/title provided for card-title mixin
+
+mixin card-header(title)
+  .uk-card-header&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-header mixin
+
+mixin card-body()
+  .uk-card-body&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-body mixin
+
+mixin card-footer()
+  .uk-card-footer&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-header mixin
+
+mixin card-media(side)
+  div(class='uk-card-media-'+side)&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-media mixin
+
+mixin card-media-top()
+  card-media('top')&attributes(attributes): block
+
+mixin card-media-bottom()
+  card-media('bottom')&attributes(attributes): block
+
+mixin card-media-left(width,height)
+  - attributes.class = ((attributes.class)?attributes.class+' ':'') + 'uk-cover-container'
+  card-media('left')&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-media-left mixin
+    canvas(width=width height=height)
+
+mixin card-media-right(width,height)
+  - attributes.class = ((attributes.class)?attributes.class+' ':'') + 'uk-cover-container'
+  card-media('right')&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for card-media-left mixin
+    canvas(width=width height=height)
+
+mixin card-badge(text)
+  .uk-card-badge.uk-label
+    if text
+      = text
+    else if block
+      block
+    else
+      p Error: No block/text provided for card-badge mixin

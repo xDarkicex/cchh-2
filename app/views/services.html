@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" viewport-fit="cover">
+    <meta name="description" content="">
+    <link rel="icon" ype="image/png" href="/static/assets/favicon.png">
+    <title>{{.Title}}</title>
+    {{template "stinger" .View}}
+  </head>
+  <body>
+    <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+      <div id="offcanvas" uk-offcanvas="mode: push">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-background-primary">
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"></ul>
+        </div>
+      </div>
+      {{template "header"}}
+    </div>
+  </div>
+      <style>
+        .uk-container > p {
+          text-indent: 2em;
+        }
+        .uk-custom {
+          text-align: left;
+        }
+        .uk-card-body {
+          padding: 30px 20px;
+        }
+      </style>
+        <div class="uk-container">
+          {{template "logo"}}
+        </div>
+        <div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" style="background-image: url('/static/assets/images/services-splash.png'); height: 100vh;" data-sizes="(min-width: 650px) 650px, 100vw" uk-img uk-parallax="bgy: -200">
+         <div class="uk-text-center uk-padding-small">
+        </div>
+      </div>
+      <div class="uk-width-1-1 uk-padding">
+            <h1 class="uk-heading-line uk-heading-small uk-text-center"
+            style="font-weight: 500;"><span class="uk-heading-large">Services</span></h1>
+        </div>
+        <div class="uk-width-1-1 uk-padding">
+          <div class="uk-section-muted uk-section">
+            <div class="uk-container">
+            <h3>Compassionate Care Mobile Health</h3>
+            <hr>
+            <div class="uk-grid-match uk-child-width-1-1@m" uk-grid>
+              <div>
+                  <p>
+                    Compassionate Care Mobile Health will provide medical services, psychiatric services, and social services. Medical services available will include primary care services, such as disease education and management, prescription refills, basic wound care, and immunizations. A psychiatrist will be available to provide assessment and treatment, including prescription refills, for individuals with mental illness. Social workers will be available to ensure patients are educated on available resources and to provide assistance enrolling in appropriate programs. These programs may include enrolling in medical benefits, drug and alcohol rehab, securing housing, and access to food.
+                  </p>
+              </div>
+              {{/* <div>
+                  <p>
+                    We plan to use our program design to provide consistent access to basic healthcare needs to individuals within our communities who would otherwise utilize Emergency Rooms for routine needs, or delay seeking medical attention until simple ailments turn in to devastating situations. Compassionate Care Mobile Health will provide a consistent face of medicine to those within our communities, enabling us to establish rapport and build trust with individuals who often feel abandoned and alone. Our goal is that with this relationship we build with them, we can transition these individuals to primary care physicians once they are established with a funding source. Our vision is a long-term solution to the epidemic that is affecting hospitals nationwide and we are certain that is something we can achieve.</p>
+              </div>
+              <div>
+                  <p>Our mission is to give proper medical care to people who society has neglected despite their great need, with an acute focus on those passing through various stages of homelessness. Our hope is that through exposure, education and compassion - this beautiful mission will inspire our recipients to revere their health and stay well. Finally, our wish is for this project to induce holistic healing; a mobile clinic people can visit to find peace through the power of medical sciences, dignity and love.</p>
+              </div> */}}
+             
+            </div>
+          </div>
+        </div>
+  
+      <footer class="uk-container uk-padding">
+        <div uk-grid>
+          <div class="uk-width-1-2@m uk-width-1-1@s">
+            
+          </div>
+          
+        </div>
+      </footer>
+    </div>
+    		
+    <!-- JS FILES -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+  </body>
+</html>

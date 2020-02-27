@@ -1,15 +1,26 @@
 package main
 
 import (
-	"net/http"
+	"fmt"
+	"log"
 
-	"github.com/labstack/echo/v4"
+	"github.com/xDarkicex/CCHH-2.0/app/Server"
+	"github.com/xDarkicex/CCHH-2.0/app/helpers/render"
 )
 
+var s *server.Server
+
+func init() {
+	s = server.NewServer()
+	s.SetPort(":3002")
+	s.MiddleWare()
+	s.TLS(server.SSL_CERT_LOCATION)
+	s = render.Register(s)
+	s = s.SetRoutes()
+
+}
+
 func main() {
-	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
-	e.Logger.Fatal(e.Start(":1323"))
+	fmt.Println(s.GetStartupTime())
+	log.Fatal(s.Echo.Start(s.GetPort()))
 }

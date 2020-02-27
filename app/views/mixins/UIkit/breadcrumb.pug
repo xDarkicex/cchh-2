@@ -1,0 +1,13 @@
+mixin breadcrumb()
+  ul.uk-breadcrumb&attributes(attributes)
+    if block
+      block
+    else
+      p Error: No block provided for breadcrumb mixin
+
+mixin breadcrumb-li(title,url)
+  li&attributes(attributes)
+    if url
+      a(href=url)= title
+    else
+      span= title

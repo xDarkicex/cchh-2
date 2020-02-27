@@ -1,0 +1,14 @@
+mixin button(text,url)
+  unless attributes.class && attributes.class.includes('uk-button-')
+    - attributes.class = ((attributes.class)?attributes.class+' ':'') + 'uk-button-default'
+  if url
+    a.uk-button(href=url)&attributes(attributes)= text
+  else
+    button.uk-button&attributes(attributes)= text
+
+mixin button-group()
+  .uk-button-group
+    if block
+      block
+    else
+      p Error: No block provided for button-group mixin

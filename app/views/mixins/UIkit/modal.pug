@@ -1,0 +1,47 @@
+mixin modal()
+  div(uk-modal)&attributes(attributes)
+    if block
+      block
+    else
+      | Error: No block provided for modal mixin
+
+mixin modal-dialog()
+  .uk-modal-dialog&attributes(attributes)
+    if block
+      block
+    else
+      | Error: No block provided for modal-dialog mixin
+
+
+mixin modal-header()
+  .uk-modal-header
+    if block
+      block
+    else
+      | Error: No block provided for modal-header mixin
+
+mixin modal-body()
+  .uk-modal-body
+    if block
+      block
+    else
+      | Error: No block provided for modal-body mixin
+
+mixin modal-title(text)
+  h2.uk-modal-title&attributes(attributes)
+    if text
+      = text
+    else if block
+      block
+    else
+      | Error: No text/block provided for modal-title mixin
+
+mixin modal-footer()
+  .uk-modal-footer
+    if block
+      block
+    else
+      | Error: No block provided for modal-footer mixin
+
+mixin modal-close()
+  button.uk-modal-close-default(type='button' uk-close)
