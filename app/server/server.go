@@ -8,7 +8,6 @@ import (
 	"github.com/juju/errors"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	controllers "github.com/xDarkicex/CCHH-2.0/app/controllers/application"
 	"golang.org/x/crypto/acme/autocert"
 )
 
@@ -29,24 +28,6 @@ func init() {
 
 func GetServer() *Server {
 	return s
-}
-
-var app controllers.Application
-
-//Routes loads all routes withing application
-func (s *Server) SetRoutes() *Server {
-	s.Echo.GET("/", app.Index)
-	s.Echo.GET("/contact", app.Contact)
-	s.Echo.GET("/about", app.About)
-	s.Echo.GET("/gallery", app.Gallery)
-	s.Echo.GET("/donate", app.Donate)
-	s.Echo.GET("/get-involved", app.GetInvolved)
-	s.Echo.GET("/services", app.Services)
-	s.Echo.GET("/terms", app.Terms)
-	s.Echo.GET("/mission", app.Mission)
-	s.Echo.GET("/board", app.Board)
-	s.Echo.Static("/static", "public")
-	return s.SetEcho(s.Echo)
 }
 
 //NewServer returns server instance
@@ -113,6 +94,7 @@ func NewEcho() *echo.Echo {
 func (s *Server) MiddleWare() *Server {
 	s.Echo.Use(middleware.Recover())
 	s.Echo.Use(middleware.Logger())
+	s.Echo.Use(middleware.Gzip())
 	return s
 }
 

@@ -6,7 +6,7 @@ import (
 	"github.com/alecthomas/template"
 
 	"github.com/labstack/echo/v4"
-	server "github.com/xDarkicex/CCHH-2.0/app/Server"
+	"github.com/xDarkicex/CCHH-2.0/app/server"
 )
 
 type TemplateRenderer struct {

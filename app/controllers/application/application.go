@@ -78,7 +78,7 @@ func (app Application) Mission(c echo.Context) error {
 
 func (app Application) Terms(c echo.Context) error {
 	return c.Render(http.StatusOK, "terms.html", &map[string]interface{}{
-		"Title": "terms",
+		"Title": "Terms",
 		"View":  "terms",
 	})
 }
