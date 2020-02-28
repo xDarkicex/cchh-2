@@ -1,10 +1,7 @@
 package main
 
 import (
-	"log"
-
-	"github.com/juju/errors"
-	"github.com/xDarkicex/CCHH-2.0/app/helpers/render"
+	"github.com/xDarkicex/CCHH-2.0/app/helpers/compile"
 	"github.com/xDarkicex/CCHH-2.0/app/server"
 	"github.com/xDarkicex/CCHH-2.0/app/server/action"
 )
@@ -12,15 +9,16 @@ import (
 var s *server.Server
 
 func init() {
-
+	compile.Assets()
 	s = server.NewServer()
-	s.SetPort(":3002")
-	s.MiddleWare()
-	s.TLS(server.SSL_CERT_LOCATION)
-	s = render.Register(s)
-	s = action.NewAction().SetRoutes(s)
+	s.Initialize(&server.Config{Address: ":443"})
+	action.NewAction("Templating").Register(s)
+	action.NewAction("Routing").SetRoutes(s)
 }
 
 func main() {
-	log.Fatal(errors.Cause(s.Echo.Start(s.GetPort())))
+	//go func() {
+	//		s.Echo.Logger.Fatal(s.Echo.Start(":80"))
+	//}()
+	s.Echo.Logger.Fatal(s.Echo.StartAutoTLS(s.GetPort()))
 }

@@ -36,7 +36,7 @@ func (app Application) Board(c echo.Context) error {
 }
 
 func (app Application) Contact(c echo.Context) error {
-	return c.Render(http.StatusOK, "Contact.html", &map[string]interface{}{
+	return c.Render(http.StatusOK, "contact.html", &map[string]interface{}{
 		"Title": "Contact",
 		"View":  "contact",
 	})
@@ -63,9 +63,9 @@ func (app Application) GetInvolved(c echo.Context) error {
 	})
 }
 func (app Application) Services(c echo.Context) error {
-	return c.Render(http.StatusOK, "service.html", &map[string]interface{}{
-		"Title": "service",
-		"View":  "service",
+	return c.Render(http.StatusOK, "services.html", &map[string]interface{}{
+		"Title": "Services",
+		"View":  "services",
 	})
 }
 

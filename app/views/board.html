@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1, user-scalable=no"
+            viewport-fit="cover">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            maximum-scale=1, user-scalable=no" viewport-fit="cover">
+        <link rel="icon" type="image/png" href="/static/assets/favicon.png">
+
+        <title>{{.Title}}</title>
+        {{template "stinger" .View}}
+        <style>
+            .uk-container>p {
+                text-indent: 2em;
+            }
+
+            .uk-custom {
+                text-align: left;
+                color: black;
+            }
+
+            .uk-card-body {
+                padding: 30px 20px;
+            }
+            img.uk-comment-avatar {
+                
+                
+                max-height: 200px;
+                min-height: 200px;
+            }
+            #forMobile {
+                    display: none;
+                    padding: 50px;
+                }
+                #forDesktop {
+                display: flex;
+                }
+            @media only screen and (max-width: 700px) {
+                #forDesktop {
+                display: none;
+                }
+                #forMobile {
+                    display: flex;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
+            <div id="offcanvas" uk-offcanvas="mode: push">
+                <div class="uk-offcanvas-bar uk-flex uk-flex-column
+                    uk-background-primary">
+                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                    <ul class="uk-nav uk-nav-primary uk-nav-center
+                        uk-margin-auto-vertical"></ul>
+                </div>
+            </div>
+            {{template "header"}}
+            <div class="uk-section-secondary uk-section" style="color: black;
+                padding-top: 0px;">
+                <div class="" style="margin-top:
+                    200px;"">
+
+                </div>
+                <div class="uk-card uk-card-primary">
+                    <header class="uk-grid-medium
+                        uk-flex-left uk-flex-column">
+                        <div>
+                            <img class="uk-comment-avatar uk-border-circle
+                                uk-box-shadow-medium"
+                                src="/static/assets/images/Donya.jpg"
+                                width="200" height="200" alt=""
+                                style="margin-left: 40px; margin-top:-40px;">
+                        </div>
+                    </header>
+                    <div class="uk-comment-body uk-padding">
+                        <p style="color: white;">Donya Sarrafian, <b>CEO/President</b></p>
+                        <p>Donya is an undergraduate student at Stanford
+                            University in Palo Alto, CA. She is majoring in
+                            Biochemistry and minoring in Management Science &
+                            Engineering. Donya is on the board of directors for
+                            Compassionate Care’s Mobile Health Clinics
+                            initiative, and is working as CEO to expand access
+                            to healthcare to homeless people in her region. She
+                            is passionate about the intersection of business and
+                            medicine, specifically optimizing healthcare and
+                            ultimately striving to remedy the socioeconomic
+                            issues facing access to healthcare in America.</p>
+                    </div>
+                </div>
+                <div class="uk-card uk-card-primary" style="margin-top:
+                    200px;">
+                    <header class="uk-grid-medium
+                        uk-flex-left uk-flex-column">
+                        <div>
+                            <img class="uk-comment-avatar uk-border-circle
+                                uk-box-shadow-medium"
+                                src="/static/assets/images/shawn.jpg"
+                                width="200" height="200" alt=""
+                                style="margin-left: 40px; margin-top: -40px;">
+                        </div>
+                    </header>
+                    <div class="uk-comment-body uk-padding">
+                        <p style="color: white;">Shawn Kaleka, <b>Vice-President</b></p>
+                        <p>After attending undergraduate and Medical School in Europe at the University of Silesia and Debrecen University, respectively, Shawn returned to California to pursue business. He is co-owner and CEO of Compassionate Care Home Health Agency, LLC. The company is Central California's largest privately held home health agency, offering employment to over 220 individuals and providing care to over 700 patients. Shawn is keen to give back to those in need via the Mobile Health Clinic of which he currently serves as Vice-President.</p>
+                    </div>
+                </div>
+                <div class="uk-card uk-card-primary" style="margin-top:
+                    200px;">
+                    <header class="uk-grid-medium
+                        uk-flex-left uk-flex-column">
+                        <div>
+                            <img class="uk-comment-avatar uk-border-circle
+                                uk-box-shadow-medium"
+                                src="/static/assets/images/Nick.jpg"
+                                width="200" height="200" alt=""
+                                style="margin-left: 40px; margin-top: -40px;">
+                        </div>
+                    </header>
+                    <div class="uk-comment-body uk-padding">
+                        <p style="color: white;">Nicholas Sanchez, <b>CFO/Treasurer</b></p>
+                        <p>
+                            Nick received his bachelor's degree in Interdisciplinary Health and Rehabilitation Sciences from California State University, Fresno and is very passionate about continuing to better the current medical landscape with his passion and proven success in helping grow Compassionate Home Health Agency into the Central Valley's largest privately held agency in under three years. Nick will be overseeing the daily operations to help maintain fluidity in each aspect of the operation, as well as mitigating any issues that may arise. Nick gained his knowledge from his current successful role as C.O.O. and co-owner of Compassionate Care Home Health Agency: Nick has developed innovative ways to lower hospital readmission rates and thereby save Medicare, local hospitals, and other healthcare providers remarkable funds. He has created, and sustained, a formidable network of healthcare professionals equally eager to make an impact in the community.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="uk-card uk-card-primary" style="margin-top:
+                    200px; margin-bottom: 200px;">
+                    <header class="uk-grid-medium
+                        uk-flex-left uk-flex-column">
+                        <div>
+                            <img class="uk-comment-avatar uk-border-circle
+                                uk-box-shadow-medium"
+                                src="/static/assets/images/kendra.jpg"
+                                width="200" height="200" alt=""
+                                style="margin-left: 40px; margin-top: -40px;">
+                        </div>
+                    </header>
+                    <div class="uk-comment-body uk-padding">
+                        <p style="color: white;">Kendra Albanese, <b>Secretary</b></p>
+                        <p>Kendra earned her master's degree from California State University, Fresno and draws her expertise from her positions as Director of Therapy of Compassionate Care Home Health Agency and Speech Language Pathologist at Community Medical Centers. Kendra has a penchant for working with patients with complex needs and has been crucial in helping Compassionate Care Home Health Agency become a leader in providing therapy services with her diligence in management and her vast knowledge of the healthcare continuum.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="uk-card-primary">
+                <div class="uk-comment-body uk-padding">
+                    <p>This team of power professionals and ambitious
+                        students are now joining forces and resources to
+                        bring that same "Compassionate Care" to individuals
+                        with limited access to basic medical services, most
+                        specifically the homeless population. These efforts
+                        will decrease preventable and unnecessary Emergency
+                        Room visits, thereby saving significant funds for
+                        the state, Medicare, the multiple hospital systems,
+                        and the community at large. As a group, we have
+                        proven ourselves as devoted to putting patients
+                        above all else, while utilizing innovative
+                        strategies to provide medical services to keep
+                        overhead costs low.</p>
+                </div>
+            </div>
+        </div>
+       
+    </body>
+</html>

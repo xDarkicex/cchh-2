@@ -16,14 +16,28 @@ type Server struct {
 	Startup time.Time
 	Port    string
 }
+type Config struct {
+	Address string
+}
 
 var s *Server
 
 //var CURRENT_SERVER = s
-var SSL_CERT_LOCATION = "/var/www/.cache"
+var SSL_CERT_LOCATION = ".cache/golang-autocert"
 
 func init() {
 
+}
+
+func (s *Server) Initialize(config *Config) *Server {
+	s.TLS(SSL_CERT_LOCATION).MiddleWare()
+	if config != nil {
+		s.SetPort(config.Address)
+	}
+	if config == nil {
+		s.SetPort(":8080")
+	}
+	return s
 }
 
 func GetServer() *Server {
@@ -44,8 +58,9 @@ func (s *Server) GetPort() string {
 }
 
 //SetPort sets port for server
-func (s *Server) SetPort(port string) {
+func (s *Server) SetPort(port string) (server *Server) {
 	s.Port = port
+	return server
 }
 
 //SetStartup takes time.Now() for start time of server
@@ -81,6 +96,10 @@ func (s *Server) GetEcho() *echo.Echo {
 	return s.Echo
 }
 
+func (s *Server) GetRenderer() *echo.Renderer {
+	return &s.Echo.Renderer
+}
+
 func (s *Server) UpdateEcho(e *echo.Echo) {
 	s.Echo = e
 }
@@ -94,12 +113,16 @@ func NewEcho() *echo.Echo {
 func (s *Server) MiddleWare() *Server {
 	s.Echo.Use(middleware.Recover())
 	s.Echo.Use(middleware.Logger())
+	s.Echo.Use(middleware.HTTPSRedirect())
 	s.Echo.Use(middleware.Gzip())
 	return s
 }
 
 //TLS configures TLS Settings
 func (s *Server) TLS(Dir string) *Server {
+
+	domains := []string{"compassionatecaremobileclinic.org", "www.compassionatecaremobileclinic.org"}
+	s.Echo.AutoTLSManager.HostPolicy = autocert.HostWhitelist(domains...)
 	s.Echo.AutoTLSManager.Cache = autocert.DirCache(Dir)
 	return s
 }

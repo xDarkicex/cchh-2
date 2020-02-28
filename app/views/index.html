@@ -1,15 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" viewport-fit="cover">
     <meta name="description" content="">
-    <link rel="icon" ype="image/png" href="/static/assets/images/favicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
-    <link href="http://localhost:3000/static/assets/css/main.css">
-    <link href="http://localhost:3000/static/assets/css/uikit.min.css">
-    <script src="http://localhost:3000/static/assets/js/main.js"></script>
-
     <title>{{.Title}}</title>
     {{template "stinger" .View}}
 
@@ -69,14 +63,14 @@
     </div>
     <div class="uk-offcanvas-content" uk-height-viewport="expand:true">
       <div id="offcanvas" uk-offcanvas="mode: push">
-        <div class="uk-container uk-flex uk-position-bottom-center uk-text-center uk-width-1-2">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column
+          uk-background-primary">
           <button class="uk-offcanvas-close" type="button" uk-close></button>
-          <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"></ul>
+          <ul class="uk-nav uk-nav-primary uk-nav-center
+            uk-margin-auto-vertical"></ul>
         </div>
       </div>
       {{template "header"}}
-
-
       <div class="uk-container">
         {{template "logo"}}
       </div>
